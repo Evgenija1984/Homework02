@@ -10,17 +10,17 @@
         android:id="@+id/buttonC"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/_C"
+        android:text="@string/C"
         android:textSize="@dimen/button_text"
         app:layout_constraintBottom_toTopOf="@id/button2"
-        app:layout_constraintEnd_toStartOf="@id/buttonPercent"
+        app:layout_constraintEnd_toStartOf="@id/eraseToTheLeft"
         app:layout_constraintStart_toStartOf="@id/button1" />
 
     <Button
-        android:id="@+id/buttonPercent"
+        android:id="@+id/eraseToTheLeft"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/percent"
+        android:text="@string/eraseToTheLeft"
         android:textSize="@dimen/button_text"
         app:layout_constraintBottom_toTopOf="@id/button3"
         app:layout_constraintEnd_toStartOf="@id/buttonDivision"
@@ -34,7 +34,7 @@
         android:textSize="@dimen/button_text"
         app:layout_constraintBottom_toTopOf="@id/buttonMultiply"
         app:layout_constraintEnd_toEndOf="@id/buttonMultiply"
-        app:layout_constraintStart_toEndOf="@id/buttonPercent" />
+        app:layout_constraintStart_toEndOf="@id/eraseToTheLeft" />
 
     <Button
         android:id="@+id/button1"
@@ -140,7 +140,7 @@
         android:layout_height="wrap_content"
         android:text="@string/_7"
         android:textSize="@dimen/button_text"
-        app:layout_constraintBottom_toTopOf="@id/buttonSquareRoot"
+        app:layout_constraintBottom_toTopOf="@id/buttonPercent"
         app:layout_constraintEnd_toStartOf="@id/button8"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
@@ -180,10 +180,10 @@
         app:layout_constraintTop_toBottomOf="@id/buttonMinus" />
 
     <Button
-        android:id="@+id/buttonSquareRoot"
+        android:id="@+id/buttonPercent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/_SquareRoot"
+        android:text="@string/percent"
         android:textSize="@dimen/button_text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/button0"
@@ -199,14 +199,14 @@
         android:textSize="@dimen/button_text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/buttonComma"
-        app:layout_constraintStart_toEndOf="@id/buttonSquareRoot"
+        app:layout_constraintStart_toEndOf="@id/buttonPercent"
         app:layout_constraintTop_toBottomOf="@id/button8" />
 
     <Button
         android:id="@+id/buttonComma"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/_comma"
+        android:text="@string/comma"
         android:textSize="@dimen/button_text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/buttonEqual"
