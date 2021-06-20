@@ -2,5 +2,5 @@
 <resources>
     <dimen name="button_text">40sp</dimen>
     <dimen name="marginButton">5dp</dimen>
-    <item name="bias" type="dimen" format="float">0.8</item>
+    <item name="bias" type="dimen" format="float">0.95</item>
 </resources>
