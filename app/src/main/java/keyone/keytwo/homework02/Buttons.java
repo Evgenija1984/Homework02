@@ -1,13 +1,19 @@
 package keyone.keytwo.homework02;
 
 public class Buttons {
-    private String button_1;
+    private String buttonC;
+    private String buttonEraseToTheLeft;
 
     public Buttons() {
-        button_1 = "C";
+        buttonC = "C";
+        buttonEraseToTheLeft = "Стереть символ слева";
     }
 
-    public String getButton_1() {
-        return button_1;
+    public String getButtonC() {
+        return buttonC;
+    }
+
+    public String getButtonEraseToTheLeft() {
+        return buttonEraseToTheLeft;
     }
 }

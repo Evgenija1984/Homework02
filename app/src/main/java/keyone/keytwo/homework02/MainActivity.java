@@ -15,6 +15,9 @@ import java.util.Locale;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private TextView textView1;
     private Button buttonC;
+    private Button buttonEraseToTheLeft;
+
+
     private Buttons buttons;
 
 
@@ -34,17 +37,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void initView() {
         textView1 = findViewById(R.id.textView1);
         buttonC = findViewById(R.id.buttonC);
+        buttonEraseToTheLeft = findViewById(R.id.buttonEraseToTheLeft);
         buttonC.setOnClickListener(this);
+        buttonEraseToTheLeft.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.buttonC:
-                textView1.setText(String.format(Locale.getDefault(), "%s", buttons.getButton_1()));
+                textView1.setText(String.format(Locale.getDefault(), "%s", buttons.getButtonC()));
                 break;
             case R.id.buttonEraseToTheLeft:
-                //
+                textView1.setText(String.format(Locale.getDefault(), "%s", buttons.getButtonEraseToTheLeft()));
                 break;
         }
 
