@@ -5,18 +5,47 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+import java.util.Locale;
+
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+    private TextView textView1;
+    private Button buttonC;
+    private Buttons buttons;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        if(savedInstanceState == null){
+        if (savedInstanceState == null) {
             makeToast("Первый запуск onStart");
-        }else{
+        } else {
             makeToast("Повторный запуск onStart");
+        }
+        buttons = new Buttons();
+        initView();
+    }
+
+    private void initView() {
+        textView1 = findViewById(R.id.textView1);
+        buttonC = findViewById(R.id.buttonC);
+        buttonC.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.buttonC:
+                textView1.setText(String.format(Locale.getDefault(), "%s", buttons.getButton_1()));
+                break;
+            case R.id.buttonEraseToTheLeft:
+                //
+                break;
         }
 
     }
@@ -74,4 +103,5 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this, toast, Toast.LENGTH_SHORT).show();
         Log.d("mylogs", toast);
     }
+
 }

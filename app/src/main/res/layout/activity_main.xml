@@ -9,12 +9,13 @@
 
     <TextView
         android:id="@+id/textView1"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:textSize="@dimen/button_text"
         app:layout_constraintBottom_toTopOf="@id/buttonC"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/buttonC"
+        app:layout_constraintEnd_toEndOf="@id/buttonDivision"
 
         />
     <Button
@@ -24,11 +25,11 @@
         android:text="@string/C"
         android:textSize="@dimen/button_text"
         app:layout_constraintBottom_toTopOf="@id/button2"
-        app:layout_constraintEnd_toStartOf="@id/eraseToTheLeft"
+        app:layout_constraintEnd_toStartOf="@id/buttonEraseToTheLeft"
         app:layout_constraintStart_toStartOf="@id/button1" />
 
     <Button
-        android:id="@+id/eraseToTheLeft"
+        android:id="@+id/buttonEraseToTheLeft"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/eraseToTheLeft"
@@ -45,7 +46,7 @@
         android:textSize="@dimen/button_text"
         app:layout_constraintBottom_toTopOf="@id/buttonMultiply"
         app:layout_constraintEnd_toEndOf="@id/buttonMultiply"
-        app:layout_constraintStart_toEndOf="@id/eraseToTheLeft" />
+        app:layout_constraintStart_toEndOf="@id/buttonEraseToTheLeft" />
 
     <Button
         android:id="@+id/button1"
