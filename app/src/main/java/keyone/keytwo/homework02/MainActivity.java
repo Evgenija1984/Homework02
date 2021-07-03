@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private TextView textView1;
     private Button buttonC;
     private Button buttonEraseToTheLeft;
+    private Button buttonDivision;
 
 
     private Buttons buttons;
@@ -38,8 +39,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         textView1 = findViewById(R.id.textView1);
         buttonC = findViewById(R.id.buttonC);
         buttonEraseToTheLeft = findViewById(R.id.buttonEraseToTheLeft);
+        buttonDivision = findViewById(R.id.buttonDivision);
         buttonC.setOnClickListener(this);
         buttonEraseToTheLeft.setOnClickListener(this);
+        buttonDivision.setOnClickListener(this);
     }
 
     @Override
@@ -51,6 +54,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.buttonEraseToTheLeft:
                 textView1.setText(String.format(Locale.getDefault(), "%s", buttons.getButtonEraseToTheLeft()));
                 break;
+            case R.id.buttonDivision:
+                textView1.setText(String.format(Locale.getDefault(), "%s", buttons.getButtonDivision()));
+                break;
+
         }
 
     }
