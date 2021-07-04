@@ -13,6 +13,8 @@ import android.widget.Toast;
 import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+
+    private final String KEY = "key_buttons";
     private TextView textView1;
     private Button buttonC;
     private Button buttonEraseToTheLeft;
@@ -162,12 +164,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     @Override
-    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
-        super.onRestoreInstanceState(savedInstanceState);
-        makeToast("onRestoreInstanceState");
-    }
-
-    @Override
     protected void onResume() {
         super.onResume();
         makeToast("onResume");
@@ -179,10 +175,27 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         makeToast("onPause");
     }
 
+    // метод, позволяющий сохранить данные
     @Override
     protected void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
         makeToast("onSaveInstanceState");
+        outState.putSerializable(KEY, buttons);
+    }
+
+    // метод, позволяющий восстановить данные
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        makeToast("onRestoreInstanceState");
+        buttons = (Buttons) savedInstanceState.getSerializable(KEY);
+        restoreText();
+    }
+
+    // как здесть получить то значение, которое было на экране до поворота,
+    // если текст вью один на все кнопки?
+    private void restoreText() {
+        textView1.setText(String.format(Locale.getDefault(), "%s", buttons.getButtonC()));
     }
 
     @Override

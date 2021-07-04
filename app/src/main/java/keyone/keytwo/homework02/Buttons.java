@@ -2,7 +2,9 @@ package keyone.keytwo.homework02;
 
 import android.widget.Button;
 
-public class Buttons {
+import java.io.Serializable;
+
+public class Buttons implements Serializable {
     private String buttonC;
     private String buttonEraseToTheLeft;
     private String buttonDivision;
